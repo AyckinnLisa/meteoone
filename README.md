@@ -1,4 +1,4 @@
-# **METEO ONE***
+# **METEO ONE**
 This is a new version of my weather station for RPi and a 7inch screen.
 
 ---
@@ -8,7 +8,7 @@ This is a new version of my weather station for RPi and a 7inch screen.
     <img
         src="https://github.com/AyckinnLisa/meteoone/blob/main/pics/screenshot.png"
         alt="DEMO"
-        style="width:50%">
+        style="width:70%">
 </div>
 
 ---
