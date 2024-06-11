@@ -1,0 +1,1131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MeteoOne</class>
+ <widget class="QWidget" name="MeteoOne">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1024</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1024</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(0, 10, 20);</string>
+  </property>
+  <widget class="QFrame" name="date_frame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>240</y>
+     <width>1001</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid rgb(30,30,30);
+
+
+
+
+
+
+
+
+
+</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>5</number>
+   </property>
+   <widget class="QLabel" name="date_label">
+    <property name="geometry">
+     <rect>
+      <x>17</x>
+      <y>6</y>
+      <width>971</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>40</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: None;</string>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="time_frame">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>310</y>
+     <width>301</width>
+     <height>161</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid rgb(25,25,25);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>5</number>
+   </property>
+   <widget class="QLabel" name="time_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>281</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>80</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: None;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="time_desc_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>281</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: None;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>670</x>
+     <y>310</y>
+     <width>341</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="presvis_layout">
+    <item>
+     <widget class="QFrame" name="pressure_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="pressure_desc_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>321</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="pressure_info_label">
+       <property name="geometry">
+        <rect>
+         <x>18</x>
+         <y>40</y>
+         <width>301</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>25</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="visibility_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="visibility_desc_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>321</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="visibiliy_info_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>321</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>25</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>1001</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="gps_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);
+
+
+
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="gps_desc_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>301</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="city_name_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>60</y>
+         <width>301</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>15</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>111</y>
+         <width>281</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="longlat_desc_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="gps_lat_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="gps_long_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>140</y>
+         <width>281</width>
+         <height>34</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="longlat_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="latitude_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="longitude_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>20</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="conditions_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);
+
+
+
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="image_label">
+       <property name="geometry">
+        <rect>
+         <x>21</x>
+         <y>8</y>
+         <width>281</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="temp_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);
+
+
+
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="temp_desc_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>11</y>
+         <width>301</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="temp_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>301</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>85</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>145</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="temp_desc_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="feeling_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="minimal_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="maximal_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>6</x>
+         <y>170</y>
+         <width>311</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="temp_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="feeling_temp_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="minimal_temp_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="maximal_temp_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>310</y>
+     <width>341</width>
+     <height>281</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="sun_wind_layout">
+    <item>
+     <widget class="QFrame" name="wind_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);
+
+
+
+
+
+
+
+
+
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QLabel" name="wind_desc_label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>10</y>
+         <width>321</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>43</y>
+         <width>301</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="wind_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="wind_speed_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="wind_orient_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="sun_frame">
+      <property name="styleSheet">
+       <string notr="true">border: 2px solid rgb(25,25,25);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Shape::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Shadow::Raised</enum>
+      </property>
+      <property name="lineWidth">
+       <number>5</number>
+      </property>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>40</y>
+         <width>301</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="sunrisesunset_desc_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="sunrise_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="sunset_desc_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>10</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="layoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>70</y>
+         <width>301</width>
+         <height>51</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="sunrisesunset_layout">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="sunrise_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="sunset_label">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>25</pointsize>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">border: None;</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QPushButton" name="sun_desc_button">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>5</y>
+         <width>321</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: None</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QFrame" name="humidity_frame">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>480</y>
+     <width>301</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid rgb(25,25,25);</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Shadow::Raised</enum>
+   </property>
+   <property name="lineWidth">
+    <number>5</number>
+   </property>
+   <widget class="QLabel" name="humidity_desc_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>281</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>10</pointsize>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: None;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="humidity_info_label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>281</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial</family>
+      <pointsize>25</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: None;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
