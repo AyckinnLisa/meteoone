@@ -178,7 +178,7 @@ class MeteoOne(QMainWindow):
                 Blue    = (0, 180, 255)
                 Yellow  = (255, 255, 0)
         '''
-        if "08:59" < self.current_time < "21:59":
+        if "08:59" < self.current_time < "21:00":
             '''
                 TIME color for light mode
             '''
@@ -363,7 +363,7 @@ class MeteoOne(QMainWindow):
             '''
             if read_json_file()['weather'][0]['description'] == "ciel dégagé":
                 self.gui.image_label.setStyleSheet("border: None")
-                self.gui.image_label.setPixmap(QPixmap(basedir + '/pics/moon.png'))
+                self.gui.image_label.setPixmap(QPixmap(str(basedir) + '/pics/moon.png'))
 
             if read_json_file()['weather'][0]['description'] == "peu nuageux":
                 self.gui.image_label.setStyleSheet("border: None")
