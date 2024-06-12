@@ -178,7 +178,7 @@ class MeteoOne(QMainWindow):
                 Blue    = (0, 180, 255)
                 Yellow  = (255, 255, 0)
         '''
-        if "08:59" < self.current_time < "22:00":
+        if "07:59" < self.current_time < "22:00":
             '''
                 TIME color for light mode
             '''
